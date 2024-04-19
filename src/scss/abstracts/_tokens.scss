@@ -23,8 +23,7 @@ $box-shadow-2: 0px 10px 10px rgb(201, 213, 225, 0.5034);
 
 $box-shadow-3: 0px 40px 40px -10px rgb(201, 213, 225, 0.5034);
 
-$box-shadow-4: 0px 6px 5px rgb(0, 0, 0, 0.03), 0px 22px 18px rgb(0, 0, 0, 0.042),
-  0px 100px 80px rgb(0, 0, 0, 0.07);
+$box-shadow-4: 0px 4px 4px rgb(0, 0, 0, 0.25), 0px 40px 40px -10px rgb(201, 213, 225, 0.5034);
 
 $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
   0px 100px 80px rgb(0, 0, 0, 0.1);
@@ -72,13 +71,13 @@ $button-border: 0;
 $button-border-radius: $border-radius-1;
 
 // cards
-$card-flow-spacing: $size-2;
-$card-padding: $size-8;
-$card-shadow: $box-shadow-1;
+$card-flow-spacing: 0;
+$card-padding: 0;
+$card-shadow: $box-shadow-4;
 $card-border-radius: $border-radius-2;
 $card-background-default: white;
 $card-color-default: $body-text-color;
 $card-font-family: $body-font-family;
 $card-line-height: 1.25;
-$card-heading-color-default: $card-color-default;
+$card-heading-color-default: $heading-color-default;
 $card-heading-font-size: $font-size-500;

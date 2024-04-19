@@ -1,7 +1,9 @@
 @use "../abstracts/" as *;
 
 .card {
-  display: grid;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
   gap: $card-flow-spacing;
   padding: $card-padding;
   background-color: $card-background-default;
@@ -11,7 +13,21 @@
   box-shadow: $card-shadow;
   border-radius: $card-border-radius;
 
+  @include mq(small) {
+    flex-direction: row;
+  }
+
+  img {
+    max-width:285px;
+  }
+
   &__heading {
     @include heading($card-heading-font-size, $card-heading-color-default);
+  }
+
+  &__body {
+    padding-block-end: 2.25rem;
+    padding-block-start: 2.25rem;
+    padding-inline: $size-8;
   }
 }
