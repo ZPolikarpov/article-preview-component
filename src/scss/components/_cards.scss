@@ -17,18 +17,41 @@
     flex-direction: row;
   }
 
-  img {
-    max-width:285px;
+  .left-image {
+    max-width: 285px;
     object-fit: cover;
   }
 
   &__heading {
     @include heading($card-heading-font-size, $card-heading-color-default);
+    line-height: 1.28;
   }
 
   &__body {
-    padding-block-end: 2.25rem;
+    padding-block-end: 1.25rem;
     padding-block-start: 2.25rem;
     padding-inline: $size-8;
+
+    @include mq(small) {
+      padding-block: $size-8;
+      padding-inline: $size-9;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: $size-8;
+
+    @include mq(small) {
+      margin-block-start: $size-5;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: $size-4;
+    }
   }
 }

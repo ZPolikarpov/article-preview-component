@@ -23,7 +23,8 @@ $box-shadow-2: 0px 10px 10px rgb(201, 213, 225, 0.5034);
 
 $box-shadow-3: 0px 40px 40px -10px rgb(201, 213, 225, 0.5034);
 
-$box-shadow-4: 0px 4px 4px rgb(0, 0, 0, 0.25), 0px 40px 40px -10px rgb(201, 213, 225, 0.5034);
+$box-shadow-4: 0px 4px 4px rgb(0, 0, 0, 0.25),
+  0px 40px 40px -10px rgb(201, 213, 225, 0.5034);
 
 $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
   0px 100px 80px rgb(0, 0, 0, 0.1);
@@ -31,7 +32,7 @@ $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
 // body
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-400;
-$body-line-height: 1;
+$body-line-height: 1.2;
 $body-font-weight: $font-weight-default;
 $body-text-color: $color-text-default;
 $body-background-color: $color-background-default;
