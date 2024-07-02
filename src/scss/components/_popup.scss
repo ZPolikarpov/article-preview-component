@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+  
+  /* The actual popup (appears on top) */
+.popup {
+  display: flex;
+  opacity: 0;
+  gap: 16px;
+  align-items: center;
+  background-color: $color-neutral-800;
+  color: $color-neutral-400;
+  border-radius: $border-radius-2;
+  padding: 18px 37px;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-60px);
+  transition:0.5s;
+  
+  /* Popup arrow */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  &_text {
+    letter-spacing: 5px;
+    font-size: $font-size-400;
+    font-weight: $font-weight-default;
+  }
+  
+  &.show {
+    opacity: 1;
+  }
+}
