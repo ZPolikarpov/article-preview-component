@@ -14,5 +14,14 @@
   padding: $button-padding;
   border: $button-border;
   border-radius: $button-border-radius;
+  background-color: $color-neutral-100;
   transition: 275ms ease;
+
+  &:is(:hover, :focus) {
+    background-color: $color-neutral-600;
+
+    & > img {  
+      filter: brightness(0) invert(1);
+    }
+  }
 }
