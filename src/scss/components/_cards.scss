@@ -12,14 +12,20 @@
   line-height: $card-line-height;
   box-shadow: $card-shadow;
   border-radius: $card-border-radius;
-
-  @include mq(small) {
+  
+  @include mq(medium) {
     flex-direction: row;
   }
 
   .left-image {
-    max-width: 285px;
+    max-width: 100%;
     object-fit: cover;
+    aspect-ratio: 3.27 / 2;
+    
+    @include mq(medium) {
+      max-width: 285px;
+      max-height: 100%;
+    }
   }
 
   &__heading {
@@ -32,7 +38,7 @@
     padding-block-start: 2.25rem;
     padding-inline: $size-8;
 
-    @include mq(small) {
+    @include mq(medium) {
       padding-block: $size-8;
       padding-inline: $size-9;
     }
