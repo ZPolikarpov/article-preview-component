@@ -57,16 +57,17 @@
   padding-block-end: 1.25rem;
 
   @include mq(medium) {
+    padding-block-end: 2rem;
     padding-inline: $size-9;
   }
 
   .showPopup & {
-    padding-block-start: 1´0.75rem;
+    padding-block-start: 0.75rem;
     padding-block-end: 0.75rem;
 
     @include mq(medium) {
       padding-block-start: 0.875rem;
-      padding-block-end: 1.25rem;
+      padding-block-end: 2rem;
     }
   }
 
