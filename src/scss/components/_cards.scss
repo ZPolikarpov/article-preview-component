@@ -11,12 +11,12 @@
   color: $card-color-default;
   line-height: $card-line-height;
   box-shadow: $card-shadow;
-  border-radius: 10px;
+  border-radius: $card-border-radius;
   position: relative;
   
   @include mq(medium) {
     position: static;
-    border-radius: $card-border-radius;
+    border-radius: $border-radius-2;
     flex-direction: row;
   }
 
