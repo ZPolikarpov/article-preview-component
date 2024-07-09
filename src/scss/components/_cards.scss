@@ -16,7 +16,6 @@
   
   @include mq(medium) {
     position: static;
-    border-radius: $border-radius-2;
     flex-direction: row;
   }
 
