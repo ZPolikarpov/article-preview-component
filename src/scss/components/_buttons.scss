@@ -17,6 +17,8 @@
   background-color: $color-neutral-100;
   transition: 275ms ease;
 
+  z-index: 2;
+
   &:is(:hover, :focus) {
     background-color: $color-neutral-600;
 

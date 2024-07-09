@@ -8,41 +8,45 @@ import icon_pinterest from "./assets/images/icon-pinterest.svg"
 
 
 function App() {
-  const popup = useRef()
+  const card = useRef()
   function openPopup(event) {
-    if(document.activeElement === event.currentTarget && popup.current.classList.contains("show")) {
+    if(document.activeElement === event.currentTarget && card.current.classList.contains("showPopup")) {
       event.currentTarget.blur()
     }
-    popup.current.classList.toggle("show");
+    card.current.classList.toggle("showPopup");
   }
 	return (
 		<>
 			<main>
-				<div className="container">
+				<div className="container" ref={card}>
 					<div className="card">
 						<img className="left-image" src={img_drawers} alt="An image featuring a green cabinet with 2 pictures and a brown vase on top of it" />
-						<div className="card__body">
-							<h1 className="card__heading">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
-							<p className="margin-block-start-3" style={{ lineHeight: "20px", letterSpacing: "0.12px" }}>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
-							<div className="card__footer">
-								<div className="author">
-									<img src={img_michelle} alt="A portrait of a woman" style={{ width: "40px", borderRadius: "50%" }} />
-									<div>
-										<p className="fw-bold clr-neutral-800">Michelle Appleton</p>
-										<p className="margin-block-start-1 clr-neutral-400">28 Jun 2020</p>
-									</div>
-								</div>
-								<button className="button | round" style={{ width: "32px", height: "32px", padding: "0" }} onClick={openPopup} >
-									<img src={icon_share} alt="" />
-                  <div className="popup" ref={popup}>
-                    <p className="popup__text">SHARE</p>
-                    <a href="https://www.facebook.com/"><img src={icon_facebook} alt="To Facebook" /></a>
-                    <a href="https://x.com/"><img src={icon_twitter} alt="To X" /></a>
-                    <a href="https://www.pinterest.de/"><img src={icon_pinterest} alt="To Pinterest" /></a>
+						
+            <div className="test">
+              <div className="card__body">
+                <h1 className="card__heading">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+                <p className="margin-block-start-3" style={{ lineHeight: "20px", letterSpacing: "0.12px" }}>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+              </div>
+              <div className="card__footer">
+                <div className="author">
+                  <img src={img_michelle} alt="A portrait of a woman" style={{ width: "40px", borderRadius: "50%" }} />
+                  <div>
+                    <p className="fw-bold clr-neutral-800">Michelle Appleton</p>
+                    <p className="margin-block-start-1 clr-neutral-400">28 Jun 2020</p>
                   </div>
-								</button>
-							</div>
-						</div>
+                </div>
+                <button className="button | round" style={{ width: "32px", height: "32px", padding: "0" }} onClick={openPopup} >
+                  <img src={icon_share} alt="Share" />
+                </button>
+              </div>
+
+              <div className="popup">
+                <p className="popup__text | uppercase">SHARE</p>
+                <a href="https://www.facebook.com/"><img src={icon_facebook} alt="To Facebook" /></a>
+                <a href="https://x.com/"><img src={icon_twitter} alt="To X" /></a>
+                <a href="https://www.pinterest.de/"><img src={icon_pinterest} alt="To Pinterest" /></a>
+              </div>
+            </div>
 					</div>
 				</div>
 			</main>

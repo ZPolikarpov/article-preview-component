@@ -11,9 +11,12 @@
   color: $card-color-default;
   line-height: $card-line-height;
   box-shadow: $card-shadow;
-  border-radius: $card-border-radius;
+  border-radius: 10px;
+  position: relative;
   
   @include mq(medium) {
+    position: static;
+    border-radius: $card-border-radius;
     flex-direction: row;
   }
 
@@ -34,30 +37,42 @@
   }
 
   &__body {
-    padding-block-end: 1.25rem;
     padding-block-start: 2.25rem;
     padding-inline: $size-8;
 
     @include mq(medium) {
-      padding-block: $size-8;
       padding-inline: $size-9;
     }
   }
+}
 
-  &__footer {
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: $size-8;
+  margin-block-start: 1.25rem;
+  padding-block-start: 0.875rem;
+  padding-block-end: 1.25rem;
+
+  @include mq(medium) {
+    padding-inline: $size-9;
+  }
+
+  .showPopup & {
+    padding-block-start: 1´0.75rem;
+    padding-block-end: 0.75rem;
+
+    @include mq(medium) {
+      padding-block-start: 0.875rem;
+      padding-block-end: 1.25rem;
+    }
+  }
+
+  .author {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-block-start: $size-8;
-
-    @include mq(small) {
-      margin-block-start: $size-5;
-    }
-
-    .author {
-      display: flex;
-      align-items: center;
-      gap: $size-4;
-    }
+    gap: $size-4;
   }
 }

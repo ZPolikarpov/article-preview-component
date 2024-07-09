@@ -2,32 +2,80 @@
 
   
   /* The actual popup (appears on top) */
+// .popup {
+//   display: flex;
+//   opacity: 0;
+//   gap: 16px;
+//   align-items: center;
+//   background-color: $color-neutral-800;
+//   color: $color-neutral-400;
+//   border-radius: $border-radius-1;
+//   padding: 18px 37px;
+//   position: absolute;
+//   z-index: 1;
+//   transform: translateY(-60px);
+//   visibility: hidden;
+//   cursor: default;
+//   transition:0.5s;
+  
+//   /* Popup arrow */
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 100%;
+//     left: 50%;
+//     margin-left: -10px;
+//     border-width: 10px;
+//     border-style: solid;
+//     border-color: #555 transparent transparent transparent;
+//   }
+  
+//   &__text {
+//     letter-spacing: 5px;
+//     font-size: $font-size-400;
+//     font-weight: $font-weight-default;
+//   }
+  
+//   &.show {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+// }
+
 .popup {
   display: flex;
   opacity: 0;
-  gap: 16px;
+  gap: $size-4;
   align-items: center;
   background-color: $color-neutral-800;
   color: $color-neutral-400;
-  border-radius: $border-radius-1;
-  padding: 18px 37px;
-  position: absolute;
   z-index: 1;
-  transform: translateY(-60px);
-  visibility: hidden;
   cursor: default;
-  transition:0.5s;
   
-  /* Popup arrow */
-  &::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+  padding: 22px 32px;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  @include mq(medium) {
+    bottom: auto;
+    width: auto;
+    padding: 18px 37px;
+    transform: translateY(-125px) translateX(107%);
+    border-radius: $border-radius-1;
+
+    /* Popup arrow */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 99%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: $color-neutral-800 transparent transparent transparent;
+    }
   }
   
   &__text {
@@ -36,7 +84,7 @@
     font-weight: $font-weight-default;
   }
   
-  &.show {
+  .showPopup & {
     visibility: visible;
     opacity: 1;
   }
